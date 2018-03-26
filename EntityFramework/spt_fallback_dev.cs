@@ -12,14 +12,17 @@ namespace EntityFramework
     using System;
     using System.Collections.Generic;
     
-    public partial class persontbl
+    public partial class spt_fallback_dev
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public Nullable<System.DateTime> DateofBirth { get; set; }
-        public Nullable<int> GenderId { get; set; }
-    
-        public virtual Gender Gender { get; set; }
+        public string xserver_name { get; set; }
+        public System.DateTime xdttm_ins { get; set; }
+        public System.DateTime xdttm_last_ins_upd { get; set; }
+        public Nullable<int> xfallback_low { get; set; }
+        public string xfallback_drive { get; set; }
+        public int low { get; set; }
+        public int high { get; set; }
+        public short status { get; set; }
+        public string name { get; set; }
+        public string phyname { get; set; }
     }
 }

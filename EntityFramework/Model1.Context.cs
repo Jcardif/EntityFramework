@@ -13,10 +13,10 @@ namespace EntityFramework
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PersonEntities : DbContext
+    public partial class masterEntities : DbContext
     {
-        public PersonEntities()
-            : base("name=PersonEntities")
+        public masterEntities()
+            : base("name=masterEntities")
         {
         }
     
@@ -25,7 +25,11 @@ namespace EntityFramework
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Gender> Genders { get; set; }
-        public virtual DbSet<persontbl> persontbls { get; set; }
+        public virtual DbSet<MSreplication_options> MSreplication_options { get; set; }
+        public virtual DbSet<spt_fallback_db> spt_fallback_db { get; set; }
+        public virtual DbSet<spt_fallback_dev> spt_fallback_dev { get; set; }
+        public virtual DbSet<spt_fallback_usg> spt_fallback_usg { get; set; }
+        public virtual DbSet<spt_monitor> spt_monitor { get; set; }
+        public virtual DbSet<spt_values> spt_values { get; set; }
     }
 }
